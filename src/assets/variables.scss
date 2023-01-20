@@ -1,0 +1,36 @@
+$white: #ffffff;
+$black: #000000;
+
+%flex-wrap {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+%flex-wrap-space {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+@font-face {
+	font-family: "NeueMachina-Regular";
+	src: url(../fonts/NeueMachina-Regular.otf);
+}
+
+@font-face {
+	font-family: "IgraSans";
+	src: url(../fonts/IgraSans.otf);
+}
+
+@font-face {
+	font-family: "Montserrat-Regular";
+	src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: "Verdana-Regular";
+	src: url(../fonts/Verdana.ttf);
+}
+
+$tablet-width: 768px;
+$desktop-width: 1440px;

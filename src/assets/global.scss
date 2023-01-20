@@ -1,0 +1,68 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    min-width: 373px;
+    color: $black;
+    font-size: 17px;
+    background-color: $white;
+    scroll-behavior: smooth;
+    font-family: "Verdana-Regular", sans-serif;
+    
+    @media (min-width: $desktop-width) {
+        font-size: 22px;
+    }
+}
+
+.list {
+    list-style: none;
+}
+
+.a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.none {
+    display: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.mb40 {
+    margin-bottom: 25px !important;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 40px !important;
+    }
+}
+
+.mb30 {
+    margin-bottom: 15px !important;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 30px !important;
+    }
+}
+
+.text-center {
+    text-align: center;
+}
+
+.h3 {
+    font-size: 25px;
+
+    @media (min-width: $desktop-width) {
+        font-weight: bold;
+        font-size: 30px;
+        font-family: "IgraSans", sans-serif;
+    }
+}
