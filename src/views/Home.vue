@@ -85,12 +85,6 @@
 
     <section class="right-side">
       <button class="form-button" type="button">Позвоните мне</button>
-      <!-- <ul class="icons-list list">
-        <li class="icons-list__item" v-for="icon in icons" :key="icon.id">
-          <img class="icon" :src="icon.src" :alt="icon.alt" />
-          <button type="button" class="icon-button" :id="icon.id">{{ icon.name }}</button>
-        </li>
-      </ul> -->
     </section>
 
   </div>
