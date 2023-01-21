@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <section class="left-side">
+    <section class="left-side none">
       <ul class="pdfs-list list">
         <li class="pdfs-list__item" v-for="pdf in pdfs" :key="pdf.id">
           <a :href="pdf.link" class="pdf-link">
@@ -17,6 +17,9 @@
         <div>
           <h1 сlass="headline-1">ПОСАДСКИЙ КАМЕНЬ</h1>
           <p class="under-headline">ПРОИЗВОДИТЕЛЬ КАЧЕСТВЕННОЙ ПЛИТКИ</p>
+        </div>
+        <div class="menu-wrapper" @click="openMenu">
+          <div class="hamburger-menu"></div>
         </div>
       </div>
 
@@ -117,12 +120,12 @@ export default {
           link: "about"
         },
         {
-          name: "КОНТАКТЫ",
-          link: "contacts"
-        },
-        {
           name: "КАЧЕСТВО ПРОДУКЦИИ",
           link: "quality"
+        },
+        {
+          name: "КОНТАКТЫ",
+          link: "contacts"
         },
         {
           name: "ЛИЧНЫЙ КАБИНЕТ ДИЛЕРА"
@@ -198,6 +201,13 @@ export default {
   },
 
   methods: {
+    openMenu: function () {
+      let hamburger = document.querySelector(".hamburger-menu");
+      let leftSide = document.querySelector(".left-side");
+      hamburger.classList.toggle("animate");
+      leftSide.classList.toggle("none");
+    },
+
     scrollToAnchor: function (href) {
       this.$refs[href].scrollIntoView({ behavior: "smooth" })
     },
