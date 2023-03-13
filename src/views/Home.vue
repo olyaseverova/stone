@@ -29,52 +29,134 @@
         </li>
       </ul>
 
-      <p class="text bold text-center mb30" ref="about">Рады представить вам новый каталог
-        производственного предприятия «Посадский Камень» на 2023 год!</p>
-      <p class="text mb30">
-        Как и прежде, главный
-        приоритет нашей компании - высокое качество продукции.
-        Наши изделия вырабатываются из
-        высокопрочного мелкозернистого бетона. Из такого же
-        бетона строят многоэтажные дома и эстакады.
-        Для его производства мы используем цемент
-        марки ПЦ600Д0, крупномодульный сеяный песок,
-        артезианскую воду и датский пигмент OMNICON</p>
+      <section class="about">
+        <img class="pdf-icon" src="@/img/plitka2.jpg" alt="Иконка PDF" />
+        <div class="description">
+          <p class="text bold" ref="about">О нас</p>
+          <p class="text mb30">
+            Производственное предприятие Посадский Камень основано в 1999 года. Основным профилем
+            является производство вибролитой тротуарной плитки премиального качества. Помимо плитки и
+            брусчатки предприятие производит бетонную фасадную отделку, лепной декор и малые
+            архитектурные формы из искусственного камня.</p>
+          <p class="text mb30">Наше предприятие ориентировано на продажи через дилеров. Мы являемся надежным
+            поставщиком тротуарной плитки во множество магазинов Московской области.</p>
+          <p class="text mb30">Обладаем собственным автопарком для доставки продукции на розничные точки партнеров.</p>
+          <p class="text mb30">Наша вибролитая продукция является самой качественной в России и производится в строгом
+            соответствии с ГОСТом.</p>
+          <p class="text mb30">В настоящий момент мы активно расширяем дилерскую сеть в Московской области и ищем новые
+            розничные точки сбыта.</p>
+        </div>
+      </section>
 
-      <p class="text bold text-center mb40">Мы даем гарантию 3 года на всю продукцию!</p>
+      <ul class="statistics-list list">
+        <li class="statistics-list__item" v-for="statistic in statistics" :key="statistic.id">
+          <h3 class="statistic-number">{{ statistic.number }}</h3>
+          <p class="statistic-text">{{ statistic.text }}</p>
+        </li>
+      </ul>
 
-      <section class="catalog" id="catalog">
-        <h3 class="h3 text-center">КАТАЛОГ</h3>
-        <ul class="products-list list">
-          <li class="products-list__item" v-for="product in products" :key="product.id">
-            <img class="product" :src="product.src" :alt="product.alt" />
-            <p class="product-name">{{ product.name }}</p>
+      <section class="principles">
+        <p class="text bold mb40" ref="about">Принципы работа предприятия</p>
+        <p class="text mb30">Наше предприятие максимально ориентировано на розничные продажи в небольших и средних
+          несетевых и мелкосетевых строительных магазинах в Московской области. Мы работаем по
+          принципу B2B. Наши достоинства для дилеров:</p>
+
+        <ul class="principles-list list">
+          <li class="principles-list__item" v-for="principle in principles" :key="principle.id">
+            <div class="principle-dot"></div>
+            <p class="principles-text">{{ principle }}</p>
           </li>
         </ul>
       </section>
 
-      <section class="quality" id="quality" ref="quality">
-        <h3 class="h3 text-center">ВИБРОЛИТАЯ ТРОТУАРНАЯ ПЛИТКА</h3>
-        <p class="text">Вибролитье – классическая технология изготовления тротуарной плитки, проверенная 300-
-          летней историей. Неоспоримыми преимуществами вибролитья являются возможность исполнения
-          тротуарной плитки в самых разнообразных формах, цветовых и дизайнерских решениях, высокая
-          прочность и долговечность изделий.</p>
-        <p class="text">К сожалению, последние годы Россию наводнили кустарные придорожные плиточные
-          производства, которые с грубейшими нарушениями лепят дешевый контрафакт. Из-за это у потребителя
-          сложилось ложное мнение, что вибролитая технология хуже новомодной технологии вибропрессования.</p>
-        <p class="text">
-          На самом деле тротуарная плитка, изготовленная в строгом соответствии с отечественными
-          ГОСТами, не только не уступает, а значительно превосходит по своим физическим свойствам
-          вибропрессованные аналоги.</p>
-      </section>
+      <section class="reviews">
+        <p class="text bold mb40" ref="about">Отзывы дилеров</p>
 
-      <section class="portfolio" id="portfolio">
-        <h3 class="h3 text-center">ПОРТФОЛИО</h3>
-        <ul class="jobs-list list">
-          <li class="jobs-list__item" v-for="job in jobs" :key="job.id">
-            <img class="job" :src="job.src" :alt="job.alt" />
+        <ul class="reviews-list list">
+          <li class="reviews-list__item" v-for="review in reviews" :key="review.id">
+            <img class="review-icon" src="@/img/брекчия.jpg" alt="Иконка Дилера" />
+            <p class="review-text">{{ review }}</p>
           </li>
         </ul>
+      </section>
+
+      <section class="guarantee">
+        <p class="text bold mb40 text-center" ref="about">Гарантия качества</p>
+        <div class="guarantee-wrap">
+          <div class="description">
+            <p class="text">
+              Предприятие «Посадский Камень» специализируется на производстве вибролитой продукции
+              премиального качества, достигаемое за счет строгого внутреннего технического контроля,
+              использования самого чистого в России бездобавочного портландцемента марки ЦЕМ 0 52,5Н
+              (М600Д0), чистейшего мытого песка и высококачественных немецких пигментов LANXESS.
+            </p>
+            <p class="text">Отдельные заказные позиции мы изготавливаем из лучшего в мире египетского белого цемента
+              Aalborg White CEM I 52,5.</p>
+            <p class="text">Идеальная геометрия достигается за счет жесткой выбраковки из ротации форм после достижения
+              регламентированного оборота и строгого контроля за состоянием полок этажерок.</p>
+            <p class="text">Вся продукция наша продукция подвергается принудительному термогидравлическому набору
+              прочности и поставляется в торговые точки в специальной герметичной упаковке, позволяющей
+              дополнительно ускоренно набирать прочность.</p>
+            <p class="text">
+              На всю продукцию автоматически распространяется гарантия 1 год с момента продажи дилером.
+            </p>
+          </div>
+          <img class="guarantee-icon" src="@/img/plitka.jpg" alt="Плитка" />
+        </div>
+      </section>
+
+      <section class="delivery">
+        <img class="delivery-icon" src="@/img/delivery.jpg" alt="Доставка" />
+        <div class="delivery-wrap">
+          <p class="text bold mb40" ref="about">Доставка и логистика</p>
+          <p class="text">Мы доставляем нашу продукцию дилерам собственными силами. В нашем распоряжении фуры
+            грузоподъёмностью 20 тонн и манипуляторы до 6 тонн. Также мы практикуем доставку продукции
+            непосредственно клиентам дилера по сниженной льготной стоимости.</p>
+        </div>
+      </section>
+
+      <section class="styling">
+        <p class="text bold mb30 text-center" ref="about">Укладка</p>
+        <p class="text">Для того, чтобы плитка прослужила долгие годы, закажите качественную укладку у
+          профессионалов. Производственное предприятие "Посадский Камень" рекомендует
+          воспользоваться услугами своей дочерней строительной организации "STEINCLUB", чьи специалисты
+          аттестованы нами и рядом других производителей.</p>
+      </section>
+
+      <section class="diler">
+        <p class="text bold mb30 text-center" ref="about">Стать дилером</p>
+
+        <form class="diler-form">
+          <div class="label-wrap">
+            <label for="INN">ИНН организации</label>
+            <input class="big" type="numver" id="INN">
+          </div>
+
+          <div class="label-wrap">
+            <label for="adress">Адрес торговой точки</label>
+            <input class="big" type="numver" id="adress">
+          </div>
+
+          <div class="label-wrap">
+            <label for="time">Время работы:</label>
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required> -
+            <input type="time" id="appt" name="appt" min="09:00" max="18:00" required>
+          </div>
+
+          <div class="label-wrap">
+            <p>Наличие вилочного погрузчика:</p>
+            <div class="radio-wrap">
+              <input type="radio" id="contactChoice1" name="contact" value="email">
+              <label for="contactChoice1">Есть</label>
+
+              <input type="radio" id="contactChoice2" name="contact" value="phone">
+              <label for="contactChoice2">Нет</label>
+            </div>
+          </div>
+
+          <button class="diler-button" type="submit">Стать дилером</button>
+
+        </form>
       </section>
 
       <footer class="contacts" id="contacts" ref="contacts">
@@ -87,7 +169,7 @@
     </section>
 
     <section class="right-side">
-      <button class="form-button" type="button">Позвоните мне</button>
+      <!-- <button class="call-button" type="button">Позвоните нам</button> -->
     </section>
 
   </div>
@@ -131,6 +213,41 @@ export default {
           name: "ЛИЧНЫЙ КАБИНЕТ ДИЛЕРА"
         }
       ],
+
+      statistics: [
+        {
+          number: "12",
+          text: "точек розничных дилеров успешно сотрудничают с нами"
+        },
+        {
+          number: "2577",
+          text: "клиентов приобрели нашу продукцию в 2023 года"
+        },
+        {
+          number: "17000 м2",
+          text: "плитки и брусчатки замощено нашими силами в 2023 году"
+        },
+        {
+          number: "75000 м2",
+          text: "продукции сделано для заказчиков в 2023 году"
+        },
+      ],
+
+      principles: [
+        "высокое качество продукции снижет дилерам головную боль с претензиями и рекламациями со стороны покупателей;",
+        "мы четко выполняем гарантийные обязательства и решаем проблему с клиентами сами без участия магазинов;",
+        "наша продукция достаточно дорогостоящая, что привлекает платёжеспособных клиентов на торговые точки дилеров",
+        "мы даем общую рекламную поддержку бренда, покупатели целенаправленно ищут нашу продукцию у дилеров",
+        "мы защищаем рынок и гарантируем дилеру наценку не менее 25%",
+        "мы не берем дополнительную плату за доставку продукции на торговую точку дилера",
+        "мы обеспечиваем дилера стендами, рекламными щитами и материалами, образцами продукции"
+      ],
+
+      reviews: [
+        "Donec adipiscing tristique risus nec. Justo laoreet sit amet cursus sit amet dictum sit",
+        "Et ultrices neque ornare aenean euismod elementum. Ultricies leo integer malesuada nunc",
+        "Tortor id aliquet lectus proin nibh Tortor id aliquet lectus proin nibh Tortor id aliquet"
+      ]
     }
   },
 

@@ -10,13 +10,13 @@ body {
     overflow-x: hidden;
     min-width: 373px;
     color: $black;
-    font-size: 17px;
+    font-size: 14px;
     background-color: $white;
     scroll-behavior: smooth;
     font-family: "Verdana-Regular", sans-serif;
     
     @media (min-width: $desktop-width) {
-        font-size: 22px;
+        font-size: 16px;
     }
 }
 
@@ -39,6 +39,7 @@ body {
 
 .bold {
     font-weight: bold;
+    font-size: 22px;
 }
 
 .mb40 {
@@ -53,7 +54,7 @@ body {
     margin-bottom: 15px !important;
 
     @media (min-width: $desktop-width) {
-        margin-bottom: 30px !important;
+        margin: 0 0 12px 0 !important;
     }
 }
 
