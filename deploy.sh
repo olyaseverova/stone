@@ -12,7 +12,7 @@ echo 'poskam.ru' > CNAME
 
 git init
 git add -A
-git commit -m 'deployNEW'
+git commit -m 'deploy123'
 
 # if you are deploying to https://<USERNAME>.github.io/<REPO>
 git push -f git@github.com:olyaseverova/stone.git main:gh-pages
